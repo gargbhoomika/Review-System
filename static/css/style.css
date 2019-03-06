@@ -1,0 +1,310 @@
+body { 
+    line-height: 1.3em; 
+    -webkit-font-smoothing: antialiased; 
+}
+.main-container 
+{
+    width: 100%;
+/*    margin: 20px auto;*/
+    background-color: rgba(0, 0, 0, 0.55);
+/*    padding: 20px;*/
+}
+
+.opaque-navbar 
+{
+    background-color: rgba(0, 0, 0, 0) !important;
+    border-bottom: 0px;
+    transition: background-color .5s ease 0s;
+}
+
+.opaque-navbar.opaque {
+    background-color: black;
+    height: 60px;
+    transition: background-color .5s ease 0s;
+}
+.navbar-brand img
+{
+    height: 90px;
+    width: 200px;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.formbox
+{
+    margin-top: 2%;
+    border: 2px solid #ffc107;  
+    border-radius: 20px; 
+    display: inline;
+    margin-bottom: 2%;
+}
+.contentbox
+{
+    display: inline;
+}
+form
+{
+    padding-top: 5px;
+}
+.overlay:before{
+  position: absolute;
+  content:" ";
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  display: block;
+  z-index:0;
+  background-color: rgba(0, 0, 0, 0.79);
+}
+label
+{
+    font-size: 120% !important;
+    font-weight: 700;
+/*    display: inline;*/
+    color: #ffc107;
+    text-align: left;
+    vertical-align: middle;
+    font-family: 'Raleway', sans-serif;
+    padding: 0px;
+}
+input , select, textarea
+{
+/*    display: inline;*/
+    text-align: center;
+    vertical-align: middle;
+    max-width: 85%;
+    padding: 10px;
+}
+.less_margin
+{
+    margin-top: -10px;
+}
+h1 
+{
+    font-family: 'Anton', sans-serif;
+    color: white;
+    margin-bottom: 0;
+    font-size: 49px;
+}
+
+h2 
+{
+    color: white;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+}
+
+button 
+{
+    background: #CA0061 ;
+    color: white !important;
+    letter-spacing: 1px;
+    border: none;
+    padding: 5px 20px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    margin-bottom: 5px !important;
+    max-width: 50%;
+    text-align: center;
+    margin-left: 0px;
+}
+
+button:hover 
+{
+    outline: white !important;
+}
+
+/*Spin Start*/
+
+#spin {
+  color:#ffc107;
+    
+}
+.contentbox
+{
+        padding-top: 15%;
+
+}
+.contentbox p
+{
+    text-align: center !important;
+    font-size: 300%;
+    text-shadow: 2px 2px 8px #ff0089;
+}
+
+#spin:after {
+  content:"";
+  animation: spin 20s linear infinite;
+}
+@keyframes spin {
+  20% { content:"Free Delivery Over Rs.500/- Order"; }
+  40% { content:"Bookings available for Birthdays"; }
+  60% { content:"100% Eggless Bakery and Cakes"; }
+  80% { content:"15% Off on Birthday Cakes"; }
+  100% { content:"Variety of fast food available"; }
+/*
+  50% { content: "adipisicing"; }
+  60% { content: "elit"; }
+  70% { content: "Hic"; }
+  80% { content: "atque"; }
+  90% { content: "fuga"; }
+*/
+}
+
+
+/*Spin end*/
+.owner
+{
+    height: 250px;
+    width: 200px;
+    border-radius: 5px;
+    padding: 10px;
+}
+#owner
+{
+    background-color: white;
+    margin-top: 0px;
+}
+.bottom-line {
+    height: 3px;
+    width: 25px;
+    margin-left:47.5%;
+    margin-bottom: 50px;
+    background-color: #000057;
+}
+
+blockquote
+{
+    font-style: italic;
+}
+.quote {
+  font-family: Georgia, serif;
+  font-size: 14px;
+}
+
+.curly-quotes:before, .curly-quotes:after {
+  display: inline-block;
+  vertical-align: top;
+  height: 30px;
+  line-height: 48px;
+  font-size: 50px;
+  opacity: .2;
+}
+
+.curly-quotes:before {
+  content: '\201C';
+  margin-right: 4px;
+  margin-left: -8px;
+}
+
+.curly-quotes:after {
+  content: '\201D';
+  margin-left: 4px;
+  margin-right: -8px;
+}
+
+
+/* Footer */
+
+footer{
+    margin-top: 0px;
+    background-color: #ffc107;
+    color:#2d4b4b;
+    background-position: bottom;
+    align-self: flex-end;
+    font-size: 18px;
+    font-stretch: extra-expanded;
+    width: 100%;
+   
+    bottom: 0;
+}
+.concon {
+}
+
+
+
+/*Stars CSS*/
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:500,100,300,700,400);
+
+
+.cont {
+  width: 100%;
+  text-align: center;
+  background: transparent;
+  color: #EEE;
+  border-radius: 5px;
+  border: none;
+  overflow: hidden;
+}
+
+div.stars {
+  display: inline-block;
+}
+
+input.star { display: none; }
+
+label.star {
+    text-align: center;
+  float: right;
+    margin-top: 0px !important;
+  padding-left: 20px;
+  font-size: 45px !important;
+  color: #ffc107 !important;
+  transition: all .2s;
+}
+
+input.star:checked ~ label.star:before {
+  content: '\f005';
+  color: #FD4;
+  transition: all .25s;
+}
+
+input.star-5:checked ~ label.star:before {
+  color: #FE7;
+  text-shadow: 0 0 20px #952;
+}
+
+input.star-1:checked ~ label.star:before { color: #F62; }
+
+label.star:hover { transform: rotate(-15deg) scale(1.3); }
+
+label.star:before {
+  content: '\f006';
+  font-family: FontAwesome;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  label.star{
+        font-size: 15px;
+        padding-left: 5px;
+    }
+    
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  label.star{
+        font-size: 15px;
+      padding-left: 10px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) 
+@media only screen and (min-width: 768px) {
+  .example {background: blue;}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) 
+@media only screen and (min-width: 992px) {
+  .example {background: orange;}
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) 
+@media only screen and (min-width: 1200px) {
+  .example {background: pink;}
+}*/

@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+    <link href="/static/css/style.css" rel="stylesheet" >
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Raleway:600" rel="stylesheet">
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:600" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:600|IBM+Plex+Sans:600" rel="stylesheet">
+	<style>
+	    
+	</style>
+</head>
+<body>
+    <section>
+    <div class="container-fluid main-container">
+       <nav class="navbar navbar-expand-lg opaque-navbar">
+                  <a class="navbar-brand" href="{{url_for('home')}}"><img src="/static/images/sahni.png"></a>
+                      <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="color: white; background-color: #ffc107; text-align: center;">
+                        <span class="navbar-toggler-icon" style="color: white;"></span>
+                      </button>
+
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent" style="text-align: center;">
+                          <a class="scroll btn btn-warning my-2 my-sm-0 ml-auto" href="#owner" style="color: white;">About Owner</a>
+                      </div>
+                </nav>
+            <div class="container concon">
+            <div class="row">
+                
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 formbox">
+                    <h1 style="color: #ffa700; font-family: 'IBM Plex Sans', sans-serif; text-align: center; ">Please Give Us Feedback</h1>
+                    <form action="{{url_for('success')}}" method="post">
+                        <div class="form-group" style="margin-top: 10px;">
+                            <label class="col-form-label">Name<span style="color: red;">*</span></label>
+                            <div>
+                                <input type="text" placeholder="Your Name" name="name" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class=" col-form-label less_margin">Email<span style="color: white; font-size: 58%;"> &nbsp; &#40;Optional&#41;</span></label>
+                            <div>
+                                <input type="email" placeholder="something@example.com" name="email" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label less_margin">Contact<span style="color: red;">*</span></label>
+                            <div>
+                                <input type="text" placeholder="eg. 9876543210" name="contact" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label less_margin">Location<span style="color: red;">*</span></label>
+                            <div>
+                                <select class="form-control" name="loc" required>
+                                  <option>Rajpura</option>
+                                  <option>Patiala</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label less_margin">Rate Us<span style="color: red;">*</span></label>
+                            <div class="cont">
+                              <div class="stars">
+                                  <input class="star star-5" id="star-5" type="radio" name="star" value="5"/>
+                                  <label class="star star-5" for="star-5"></label>
+                                  <input class="star star-4" id="star-4" type="radio" name="star" value="4"/>
+                                  <label class="star star-4" for="star-4"></label>
+                                  <input class="star star-3" id="star-3" type="radio" name="star" value="3"/>
+                                  <label class="star star-3" for="star-3"></label>
+                                  <input class="star star-2" id="star-2" type="radio" name="star" value="2"/>
+                                  <label class="star star-2" for="star-2"></label>
+                                  <input class="star star-1" id="star-1" type="radio" name="star" value="1"/>
+                                  <label class="star star-1" for="star-1"></label>
+                              </div>
+                            </div>
+                        </div>
+                         <div class="form-group">
+                            <label class="col-form-label less_margin">Birthday<span style="color: white; font-size: 60%;">&nbsp; &#40;Optional&#41;</span></label>
+                            <div>
+                                <input type="date" placeholder="BirthDate" name="bday" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label less_margin">Marriage<br><span style="font-size: 85%;">Anniversary</span><span style="color: white; font-size: 60%;">&nbsp; &#40;Optional&#41;</span></label>
+                            <div>
+                                <input type="date" placeholder="AnniversaryDate" name="Anniversary" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label less_margin"><span style="font-size: 90%;">Comments</span><span style="color: white; font-size: 60%;">&nbsp; &#40;Optional&#41;</span></label>
+                            <div>
+                                <textarea class="form-control" rows="3" placeholder="Your feedback is important to us." name="msg"></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-md btn-warning" style="text-align: center; margin-left: 50%;">Submit</button>
+                    </form>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 contentbox">
+                    <p class="align-middle"><span id="spin" class="align-middle"></span></p>
+                </div>
+            </div>
+            </div> 
+        
+        
+        
+    </div>
+    </section>
+    <section id="owner" style="background-color: white;">
+            <div class="container">
+                <div class="header-section text-center">
+                <h1 style="color: #000057; text-align: center; font-size: 200%;">About Owner</h1>
+                <hr align="center" class="bottom-line">
+            </div>
+
+                <div class="row">
+                    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12" style="text-align: center;">
+                        <img src="/static/images/owner.jpeg" class="owner" style="width: 200px; height: 250px;">
+                    </div>
+                    <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12">
+                        <figure class="quote">
+    <blockquote class="curly-quotes blockquote">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</blockquote>
+                       </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+    <footer class="page-footer font-small pt-4" style="color: white;">
+
+    <div class="container-fluid text-center text-md-left">
+
+      <div class="row">
+
+        <div class="col-md-6 mt-md-0 mt-3" style="color:#2d4b4b;">
+
+          <h5 class="text-uppercase">Contact Us</h5>
+          <p>Sahni Bakery, Rajpura</p>
+          <p>sahnibakery_lahorigate@yahoo.co.in</p>
+
+        </div>
+
+        <hr class="clearfix w-100 d-md-none pb-3">
+
+        <div class="col-md-3 mb-md-0 mb-3" style="color:#2d4b4b;">
+
+            <h5 class="text-uppercase">Connect with us </h5>
+
+            <ul class="list-unstyled">
+              <li>
+                <a href="{{url_for('home')}}" style="color:#2d4b4b;">Facebook</a>
+              </li>
+              <li>
+                <a href="{{url_for('home')}}" style="color:#2d4b4b;">Instagram</a>
+              </li>
+              <li>
+                <a href="{{url_for('home')}}" style="color:#2d4b4b;">Twitter</a>
+              </li>
+            </ul>
+
+          </div>
+          <div class="col-md-3 mb-md-0 mb-3" style="color:#2d4b4b;">
+
+            <h5 class="text-uppercase">Address</h5>
+            <p>Sahni Bakery,
+                Lahori Gate</p>
+              <p>Patiala, Punjab</p>
+              <p>Ph. 0175-2212421, 0175-2310602</p>
+            
+
+          </div>
+        </div>
+
+    </div>
+
+    <div class="footer-copyright text-center py-3" style="background-color: #ffa700; font-family: 'Montserrat', sans-serif; text-align: center;
+">Made with&nbsp; <span style="color: red;"><i class="fas fa-heart"></i></span>&nbsp; by&nbsp;
+        <button type="button" class="btn btn-md" data-toggle="modal" data-target="#exampleModalCenter" style="margin-bottom: 0px !important; text-align: center; font-family: 'Montserrat', sans-serif; background-color: white; color: #ffa700 !important;">
+          TraineeBase
+        </button>
+    </div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" style="color: black;">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">TraineeBase Developers</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ul type="none">
+            <li>Contact: +919876447989</li>
+            <li>Email: traineebase@hotmail.com</li>
+            <li>Website: <a href="http://traineebases.herokuapp.com/">www.traineebase.co.in</a></li>
+            <li>Address: Chitkara University, Punjab, India</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </footer>
+	<script src="/static/js/jquery.js"></script>
+    <script src="/static/js/jquery.backstretch.js"></script>
+	<script>
+        $.backstretch([
+          "/static/images/2.jpg",
+          "/static/images/3.jpg",
+            "/static/images/4.jpg",
+            "/static/images/5.jpg",
+            "/static/images/6.jpg"
+        ], {
+            fade: 750,
+            duration: 3000
+        });
+    </script>
+</html>
